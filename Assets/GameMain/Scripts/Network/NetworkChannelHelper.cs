@@ -1,8 +1,8 @@
 ﻿//------------------------------------------------------------
 // Game Framework
-// Copyright © 2013-2019 Jiang Yin. All rights reserved.
-// Homepage: http://gameframework.cn/
-// Feedback: mailto:jiangyin@gameframework.cn
+// Copyright © 2013-2021 Jiang Yin. All rights reserved.
+// Homepage: https://gameframework.cn/
+// Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
 using GameFramework;
@@ -93,6 +93,15 @@ namespace StarForce
             GameEntry.Event.Unsubscribe(UnityGameFramework.Runtime.NetworkCustomErrorEventArgs.EventId, OnNetworkCustomError);
 
             m_NetworkChannel = null;
+        }
+
+        /// <summary>
+        /// 准备进行连接。
+        /// </summary>
+        public void PrepareForConnecting()
+        {
+            m_NetworkChannel.Socket.ReceiveBufferSize = 1024 * 64;
+            m_NetworkChannel.Socket.SendBufferSize = 1024 * 64;
         }
 
         /// <summary>
