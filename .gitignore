@@ -5,6 +5,8 @@
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 /.vs/
+/Logs
+/.idea
 
 *.csproj
 *.unityproj
@@ -22,3 +24,4 @@
 /ProjectSettings/ProjectVersion.txt
 /Packages/*
 /UnityPackageManager/*
+
